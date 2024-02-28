@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Week 8 Lab | Objects</h1>
+
+    <script>
+        //one example on how to create an array
+        var cars = new Array();
+        cars[0] = "Toyota";
+        cars[1] = "Honda";
+        cars[2] = "ford";
+        cars[3] = "Subaru";
+        cars[4] = "Porsche";
+        cars[5] = "Volkswagen";
+
+        console.log(cars);
+
+        for(let i = 0; i<cars.length; i++){
+            console.log(cars[i]);
+        }
+
+        //associative arrays
+        var sportsTeams =[]
+        sportsTeams["Basketball"] = "Red Sox"
+        sportsTeams["Hocky"] = "Bruins"
+        sportsTeams["Basketball"] = "celtics"
+        sportsTeams["Football"] = "patriots"
+
+        console.log(sportsTeams["Basketball"]);
+
+        // Two Dementional Arrays
+        var Vehicles = []
+        Vehicles[0] = ["make", "toyota", "honda", "ford"]
+        Vehicles[1] = ["model", "camery", "accord", "Taurus"]
+        Vehicles[2] = ["model", "2010", "2013", "2019"]
+
+        for(let i = 0; i<Vehicles.length; i++){
+            for(let j = 0; j<Vehicles[i].length; j++){
+                console.log(Vehicles[i][j]);
+            }
+        } 
+
+        //objects
+        var character1 = {
+            class:"Plumber",
+            name:"mario",
+            hasMustache:true,
+            hasPlunger:true, 
+            jumpHeight:10,
+            hasHat:true
+        }
+
+
+        var character2 = {
+            class:"Princess",
+            name:"Peach",
+            hasMustache:false,
+            hasPlunger:false, 
+            jumpHeight:7,
+            hasHat:false,
+            hasCrown:true
+        }
+
+        var character3 = {
+            class:"Plumber",
+            name:"Luigi",
+            hasMustache:true,
+            hasPlunger:true, 
+            jumpHeight:10,
+            hasHat:true,
+            hasCrown:false
+        }
+
+        var character4 = {
+            class:"Villan",
+            name:"Bowser",
+            hasMustache:false,
+            hasPlunger:false, 
+            jumpHeight:10,
+            hasHat:false,
+            hasCrown:true
+        }
+
+        var characters = [character1, character2, character3, character4];
+
+        for(let key in characters){
+            console.log(key.class); 
+        }
+
+
+    </script>
+    
+</body>
+</html>
