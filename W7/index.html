@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 7 Homework</title>
 </head>
+
 <body>
-    
+    <h1>Pay Calculator Form</h1>
+    <form>
+        <label for="first">First Name</label>
+        <input type="text"id="first">
+        <br>
+        <label for="last">Last Name</label>
+        <input type="text" id="last">
+        <br>
+        <label for="hours">Hours Worked</label>
+        <input type="number" id="hours">
+        <br>
+        <label for="rate">Hourly Rate</label>
+        <input type="number" id="rate">
+        <br>
+        <input type="Button" id="enter" value="Enter">
+        <br>
+        <br>
+        <div id="Final" style="border: 1px solid rgb(34, 234, 233); padding: 15px; background-color: bisque;">
+            <h3>Employee Info: </h3>
+            <p id="Info" style="font-family: 'Courier New', Courier, monospace;">
+                <i></i>
+            </p>
+
+            <p id="check" style="font-family: 'Courier New', Courier, monospace; width: 220px; text-align:right;"></p>
+        </div>
+        <br>
+        <br>
+        <h3>
+            <i>if the above info is correct, plase press submit</i>
+        </h3>
+        <input type="button" id="submit" value="SUBMIT">
+
+    </form>
+    <script>
+        document.querySelector(`#enter`).addEventListener("click", alertName)
+
+        function alertName(e){
+            var first = document.querySelector(`#first`).value
+            console.log(first)
+            var last = document.querySelector(`#last`).value
+            console.log(last)
+            var hours = document.querySelector(`#hours`).value
+            console.log(hours)
+            var rate = document.querySelector(`#rate`).value
+            console.log(rate)
+
+            var full = first + " " + last
+            console.log(full)
+
+            //consol.log(.toFixed(2))
+
+
+
+            //math here
+
+            var finalMessage = `${full}\n ${rate}\n ${hours}`
+            document.querySelector(`#Info`).innerHTML= finalMessage
+
+
+
+
+        }
+
+        function sumbitNow(e){
+                alert(`${full}\nHours: ${hours}\nRate: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNETPAY: $${net.tofixed(2)}`)
+        }
+
+
+    </script>
+
+<a href="../index.html">link to Table of contents</a>
 </body>
+
 </html>
