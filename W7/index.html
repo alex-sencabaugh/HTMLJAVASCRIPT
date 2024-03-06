@@ -11,7 +11,7 @@
     <h1>Pay Calculator Form</h1>
     <form>
         <label for="first">First Name</label>
-        <input type="text"id="first">
+        <input type="text" id="first">
         <br>
         <label for="last">Last Name</label>
         <input type="text" id="last">
@@ -21,6 +21,7 @@
         <br>
         <label for="rate">Hourly Rate</label>
         <input type="number" id="rate">
+
         <br>
         <input type="Button" id="enter" value="Enter">
         <br>
@@ -44,7 +45,7 @@
     <script>
         document.querySelector(`#enter`).addEventListener("click", alertName)
 
-        function alertName(e){
+        function alertName(e) {
             var first = document.querySelector(`#first`).value
             console.log(first)
             var last = document.querySelector(`#last`).value
@@ -53,6 +54,13 @@
             console.log(hours)
             var rate = document.querySelector(`#rate`).value
             console.log(rate)
+            
+            var rate = document.querySelector(`#rate`).value
+            console.log(rate)
+            
+            var rate = document.querySelector(`#rate`).value
+            console.log(rate)
+            
 
             var full = first + " " + last
             console.log(full)
@@ -62,23 +70,33 @@
 
 
             //math here
+            var grossPay = hours * rate
+            console.log(`: ${grossPay}`)
+
+
+            var taxes = grossPay * 0.2
+            console.log(`: ${taxes}`)
+
+
+            var netPay = grossPay - taxes
+            console.log(`: ${netPay}`)
 
             var finalMessage = `${full}\n ${rate}\n ${hours}`
-            document.querySelector(`#Info`).innerHTML= finalMessage
+            document.querySelector(`#Info`).innerHTML = finalMessage
 
 
 
 
         }
 
-        function sumbitNow(e){
-                alert(`${full}\nHours: ${hours}\nRate: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNETPAY: $${net.tofixed(2)}`)
+        function sumbitNow(e) {
+            alert(`${full}\nHours: ${hours}\nRate: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNETPAY: $${net.tofixed(2)}`)
         }
-
+        document.querySelector(`#subit`).addEventListener("click", alertName)
 
     </script>
 
-<a href="../index.html">link to Table of contents</a>
+    <a href="../index.html">link to Table of contents</a>
 </body>
 
 </html>
