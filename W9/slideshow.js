@@ -8,11 +8,11 @@ window.onload = function () {
     function changeImage() {
         btn.removeEventListener('click', changeImage);
         image++;
-        document.querySelector('#site-image').src = `images/${images[images]}`;
+        document.querySelector('#site-image').src = `${images[images]}`;
 
         if (image >= images.length) {
             image = 0;
-            document.querySelector('#site-image').src = `images/${images[image]}`
+            document.querySelector('#site-image').src = `${images[image]}`
         }
         setTimeout(changeImage, 2000);  
     }

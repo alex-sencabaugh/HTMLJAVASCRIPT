@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason ", last:"Vorhee s ", credit:"Friday the 13th"},
+		{first:"Freddy ", last:"Krueger ", credit:"A Nightmare on Elm Street" },
+		{first:"Roger ", last:"Rabbit ", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin ", last:"McCallister ", credit:"Home Alone" },
+		{first:"Godzilla ", last:"King of The Monsters ", credit:"Godzilla" },
+		{first:"Buzz ", last:"Lightyear ", credit:"Toy Story" },
+		{first:"Marion ", last:"Cobretti ", credit:"Cobra" }
+	]
+
+	for(let i=0; i<people.length; i++){
+		
+
+		let sec = document.createElement(`div`); 
+		document.body.appendChild(sec); 
+		sec.setAttribute("style", "border:1px solid black");	
+		let p = document.createElement(`p`)
+		let p2 = document.createElement(`p`)
+		let p3 = document.createElement(`p`)
+
+		let pfirst = document.createTextNode(people[i].first); 
+		p.appendChild(pfirst);
+		
+		
+		let plast = document.createTextNode(people[i].last +","); 
+		p2.appendChild(plast);
+		
+		let pcredit = document.createTextNode(people[i].credit +':'); 
+		p3.appendChild(pcredit);
+		sec.appendChild(p);
+		sec.appendChild(p2);
+		sec.appendChild(p3);
+		console.log(people[i])
+	}
+
+	
+</script>
+<a href="../index.html">Table of Contents</a>
+
+</html>
